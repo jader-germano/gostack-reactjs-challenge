@@ -13,7 +13,8 @@ function App() {
         api.get('repositories')
         .then((response) => {
             setRepositories(response.data);
-        });
+        })
+        .catch((error) => console.log(error));
     }
 
     async function handleAddRepository() {
